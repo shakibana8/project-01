@@ -1,0 +1,579 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;  
+}
+
+aside{
+  width: 300px;
+  height: 100vh;
+  background: rgb(240, 240, 240);
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+#open-menu:checked ~ aside{
+  transform: translateX(0);
+}
+#open-menu,#close-menu{
+  display: none;
+}
+
+main > label{
+  font-size: 2.5rem;
+}
+
+.open-menu-icon{
+  color: rgb(61, 92, 60);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+aside > label{
+  font-size: 1rem;
+}
+
+.close-menu-icon{
+  color: red;
+}
+
+.menu{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu > li {
+  width: 100%;
+  height: 10%;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.menu > li:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.637); 
+}
+
+.menu > li:hover >a{
+  transform: translateX(10px);
+  color: rgb(81, 81, 82);
+  transition: all 300ms ease-out;
+}
+
+.menu > li > a{
+  color: rgb(103, 103, 104);
+}
+
+.bg-image{
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../pictures/back-ground-img.jpg);
+  background-size: cover;
+  position: relative;
+
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background: #0000009c;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay > h3{
+  color: rgb(61, 92, 60);
+  font-size: 1.8rem;
+}
+
+.overlay > h1{
+  color: aliceblue;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.overlay > button{
+  width: 120px;
+  height: 50px;
+  background: rgb(61, 92, 60);
+  border: hidden;
+  outline: 2px solid rgb(61, 92, 60);
+  outline-offset: 3px
+}
+
+.overlay > button:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.87);
+}
+
+.border-bottom{
+  width: 100%;
+  height: 0.3rem;
+  background: linear-gradient(to right, rgb(48, 83, 48), rgb(192, 140, 44), rgb(189, 189, 29), rgb(192, 140, 44), rgb(48, 83, 48));
+}
+
+
+/* CARDS */
+.cards-container{
+  width: 100%;
+  height: 10rem;
+  background: rgb(225, 225, 226);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards{
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 300ms ease-out;
+}
+
+.cards:hover{
+  background: rgb(243, 243, 245);
+  cursor: pointer;
+}
+
+.cards > i{
+  color: rgb(61, 92, 60);
+  font-size: x-large;
+}
+
+.cards > h5{
+  letter-spacing: .1rem;
+}
+
+.cards > p{
+  text-align: center;
+  padding: 0px 10px;
+  color: rgb(43, 42, 42);
+} 
+
+
+/* TEA STATION */
+.tea-station-container{
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container > img{
+  width: 400px;
+  height: 300px;
+  border: 8px solid rgb(61, 92, 60);
+  opacity: 1;
+}
+
+.img-container > img:hover{
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.tea-station-para{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tea-station-para > span > h3 {
+  color: rgb(48, 83, 48);
+}
+
+.tea-station-para > span > h1 {
+  letter-spacing: .12rem;
+}
+
+.tea-station-para > p{
+  padding: 0px 20px;
+  color: rgb(43, 42, 42);
+}
+
+.tea-station-para > button {
+  margin-left: 20px;
+  width: 150px;
+  height: 40px;
+  letter-spacing: .12rem;
+  border: hidden;
+  background: rgb(61, 92, 60);
+  color: aliceblue;
+}
+
+.tea-station-para > button:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.87);
+}
+
+
+/* PRODUCTS */
+.products-container{
+  width: 100%;
+  height: 25rem;
+  background: rgb(225, 225, 226);
+  display: flex;
+}
+
+.discription{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0px 20px;
+}
+
+.discription > div{
+  padding: 0px 25px;
+}
+
+.discription > div > h3 {
+  color: rgb(61, 92, 60);
+  letter-spacing: .12rem;
+}
+
+.discription > div > h2 {
+  letter-spacing: .2rem;
+  font-size: 2rem;
+}
+
+.discription > p{
+  color: rgb(43, 42, 42);
+  padding: 0px 40px;
+}
+
+.discription > button{
+  margin-left: 40px;
+  width: 150px;
+  height: 35px;
+  border: hidden;
+  letter-spacing: .12rem;
+  background: rgb(61, 92, 60);
+  color: aliceblue;
+  transition: all 300ms ease-out;
+}
+
+.discription > button:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.87);
+}
+
+.products-cards-container{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.products-cards{
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+.products-cards > img{
+  width: 250px;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.products-cards > h5{
+  letter-spacing: .2rem;
+}
+
+
+.products-cards > span{
+  color: rgb(61, 92, 60);
+}
+
+
+/* SERVICES */
+.services-container{
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-heading{
+  width: auto;
+  height: 15%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.services-heading > h3{
+  color: rgb(61, 92, 60);
+  font-size: larger;
+}
+
+.services-heading > h2{
+  font-size: xx-large;
+}
+
+.services-card-container{
+  width: auto;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 30px;
+}
+
+.services-cards{
+  width: 30%;
+  height: auto;
+  background: rgb(225, 225, 226);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.services-cards:hover{
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.342);
+}
+
+.services-cards > img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.services-cards-para{
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.services-cards-para > div{
+  width: 50px;
+  height: 50px;
+  background: rgb(134, 167, 134);
+  color: rgb(61, 92, 60);
+  border: 8px solid rgb(225, 225, 226);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 270px;
+}
+
+.services-cards-para > h4{
+  letter-spacing: .12rem;
+  padding: 15px;
+}
+
+.services-cards-para > p{
+ color: #292a2b; 
+}
+
+.services-cards-para > button{
+  padding: 10px;
+  background: rgb(61, 92, 60);
+  color: aliceblue;
+  border: hidden;
+  border-radius: 3px;
+  letter-spacing: .11rem;
+}
+
+.services-cards-para > button:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.87);
+}
+
+
+/* CONTACT US */
+
+.contact-us-container{
+  width: 100%;
+  height: 25rem;
+  background: rgb(225, 225, 226);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-us > p >i{
+  color: rgb(61, 92, 60);
+}
+
+.contact-us-form{
+  width: 40%;
+  height: 80%;
+  background: white;
+  border-radius: 10px;
+  margin-left: 70px;
+  overflow: hidden;
+}
+
+.contact-us-form > form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-us-form > form > h3{
+  text-align: center;
+  color: #292a2b;
+  font-size: larger;
+  padding-top: 15px;
+}
+
+.contact-us-form > form > input{
+  background: rgb(225, 225, 226);
+  border: hidden;
+  border-radius: 3px;
+  margin: 0px 30px;
+}
+
+.name-input,.email-input{
+  padding: 10px 0px;
+}
+
+.massege-input{
+  padding: 25px 0px;
+}
+
+.contact-us-form > form > button{
+  padding: 10px;
+  background: rgb(61, 92, 60);
+  border: hidden;
+  color: aliceblue;
+}
+
+.contact-us-form > form > button:hover{
+  cursor: pointer;
+  background: rgba(61, 92, 60, 0.87);
+}
+
+
+/* FOOTER */  
+.footer{
+  width: 100%;
+  height: 10rem;
+  background: #292a2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  color: aliceblue;
+}
+
+.footer > p{
+  letter-spacing: 0.12rem;
+}
+
+.footer > p > span{
+  color: rgb(61, 92, 60);
+}
+
+.social-medias {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
